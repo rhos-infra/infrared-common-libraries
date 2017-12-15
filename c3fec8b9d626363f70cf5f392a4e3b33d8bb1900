@@ -1,0 +1,7 @@
+Code-Review+2: Oleksii Baranov <obaranov@redhat.com>
+Verified+1: rhosqeauto <obaranov+rhosqeauto@redhat.com>
+Submitted-by: Daniel Todorov <leinad390@gmail.com>
+Submitted-at: Fri, 15 Dec 2017 04:50:19 -0500
+Reviewed-on: https://review.gerrithub.io/391372
+Project: rhos-infra/infrared-common-libraries
+Branch: refs/heads/master
