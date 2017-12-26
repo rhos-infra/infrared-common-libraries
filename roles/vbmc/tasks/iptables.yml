@@ -37,13 +37,27 @@
           table: filter
           chain: INPUT
           jump: ACCEPT
-          protocol: "{{ item.2 }}"
+          protocol: "udp"
           source: "{{ hostvars[groups.undercloud|first].ansible_default_ipv4.address }}"
+          destination_port: "{{ item }}"
+      with_items:
+          - "{{ vbmc_ports.items() }}"
+
+    - name: allow access to port vbmc ports from overcloud
+      become: True
+      iptables:
+          action: insert
+          comment: "Infrared: vbmc ports"
+          table: filter
+          chain: INPUT
+          jump: ACCEPT
+          protocol: "udp"
+          source: "{{ item.2 }}"
           destination_port: "{{ item.1 }}"
       with_nested:
           - "{{ vbmc_ports.items() }}"
           # That's a nested list:
           -
-              - udp
-              - tcp
+              - "{% for host in groups.compute %}{{hostvars[host]['ansible_default_ipv4']['address'] }}{% if not loop.last %},{% endif %}{% endfor %}"
+
   when: vbmc_host == 'hypervisor'
