@@ -1,8 +1,14 @@
 - include_tasks: install.yml
   delegate_to: "{{  vbmc_inventory_host }}"
+  when: vbmc_inventory_host == "undercloud" or "hypervisor"
 
 - include_tasks: configure.yml
   delegate_to: "{{  vbmc_inventory_host }}"
+  when: vbmc_inventory_host == "undercloud" or "hypervisor"
+
+- include_tasks: iptables.yml
+  delegate_to: "{{  vbmc_inventory_host }}"
+  when: vbmc_inventory_host == "hypervisor" and overcloud_deploy ==def "yes"
 
 - name: Register vars for instackenv template
   set_fact:
