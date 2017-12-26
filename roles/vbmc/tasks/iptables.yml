@@ -45,5 +45,30 @@
           # That's a nested list:
           -
               - udp
-              - tcp
+
+    - name: allow access to port vbmc ports from overcloud
+      become: True
+      iptables:
+          action: insert
+          comment: "Infrared: vbmc ports"
+          table: filter
+          chain: INPUT
+          jump: ACCEPT
+          protocol: "{{ item.3 }}"
+          source: "{{ item.2 }}"
+          destination_port: "{{ item.1 }}"
+      with_nested:
+          - "{{ vbmc_ports.items() }}"
+          # That's a nested list:
+          -
+              - "{% for host in groups.compute %}{{hostvars[host]['ansible_default_ipv4']['address'] }}{% if not loop.last %},{% endif %}{% endfor %}"
+              - "{% for host in groups.controller %}{{hostvars[host]['ansible_default_ipv4']['address'] }}{% if not loop.last %},{% endif %}{% endfor %}"
+          # That's a nested list:
+          -
+            - udp
+      when:
+          - overcloud_deploy == 'yes'
+          - groups.compute is defined
+          - groups.controller is defined
+
   when: vbmc_host == 'hypervisor'
