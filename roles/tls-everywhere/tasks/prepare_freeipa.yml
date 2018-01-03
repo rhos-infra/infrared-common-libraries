@@ -1,0 +1,47 @@
+---
+- name: Update repos
+  become: yes
+  shell: yum clean all
+
+- name: install packages
+  become: yes
+  yum:
+      name:  "{{ item }}"
+      state: present
+  with_items:
+      - 'net-tools'
+      - 'deltarpm'
+      - "{{ epel_repo_url }}"
+
+- name: Download freeipa setup script
+  get_url:
+     url: "{{ freeipa_setup_script }}"
+     dest: "{{ freeipa_working_dir }}/freeipa_setup.sh"
+     mode: 775
+
+- name: Generate inventory file
+  template:
+      dest: "{{ freeipa_working_dir }}/freeipa-setup.env"
+      src: freeipa-setup.env.j2
+      force: yes
+
+- name: Add w/a for ipv6 link local
+  lineinfile:
+      path: "{{ freeipa_working_dir }}/freeipa_setup.sh"
+      insertafter: '^# Set up FreeIPA'
+      line: "sed -i '/^nameserver fe80:.*./d' /etc/resolv.conf"
+      state: present
+
+- name: Execute freeipa script
+  become: yes
+  shell: "{{ freeipa_working_dir }}/freeipa_setup.sh"
+  args:
+      executable: /bin/bash
+  register: freeipa_setup
+
+- name: Update /etc/hosts with undercloud's details
+  become: yes
+  lineinfile:
+      dest: "/etc/hosts"
+      line: "{{ hostvars[groups['undercloud'][0]].ansible_eth2.ipv4.address }} {{ groups['undercloud'][0] }}.redhat.local {{ groups['undercloud'][0] }}"
+      state: present
