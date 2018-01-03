@@ -1,0 +1,9 @@
+---
+- name: Check for network-environment file
+  stat:
+      path: "{{ freeipa_network_environment_file }}"
+  register: network_environment_file
+
+- fail:
+      msg: "Network environment file with location {{ freeipa_network_environment_file }} does not exist!"
+  when: not network_environment_file.stat.exists
