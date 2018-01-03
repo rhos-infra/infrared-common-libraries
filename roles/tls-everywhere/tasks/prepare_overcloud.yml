@@ -1,0 +1,41 @@
+---
+- name: "Generate ceph-extra-config.yaml"
+  template:
+      src: ceph-extra-config.yaml.j2
+      dest: "{{ templates_basedir }}/ceph-extra-config.yaml"
+  when:
+      - ceph
+
+- name: Assign dns as freeipa node to ctrlplane-subnet
+  shell: |
+      source {{ undercloud_rc }}
+      openstack subnet set ctlplane-subnet --dns-nameserver {{ hostvars[freeipa_node].ansible_eth2.ipv4.address }}
+
+- name: Read deployment network configuration
+  command: "cat {{ templates_basedir }}/network/network-environment.yaml"
+  register: network_template_out
+
+- name: Load deployment network configuration as YAML
+  set_fact:
+      network_template: "{{ network_template_out.stdout | from_yaml }}"
+
+- name: Assign dns as freeipa node to network-environment
+  lineinfile:
+      dest: "{{ templates_basedir }}/network/network-environment.yaml"
+      regexp: "- {{ network_template.parameter_defaults.DnsServers|first }}"
+      line: "    - {{ hostvars[freeipa_node].ansible_eth2.ipv4.address }}"
+
+- name: Get last row of overcloud deploy script
+  command: "tail -n 1 {{ overcloud_deploy_script }}"
+  register: oc_deploy_script_last_line
+
+- name: Append the TLS Everywhere templates lines to the base overcloud deploy script
+  lineinfile:
+      dest: "{{ overcloud_deploy_script }}"
+      line: "-e {{ item }} \\"
+      insertbefore: "{{ oc_deploy_script_last_line.stdout }}"
+  with_items:
+      - "{{ heat_templates_basedir }}/environments/tls-everywhere-endpoints-dns.yaml"
+      - "{{ heat_templates_basedir }}/environments/services/haproxy-public-tls-certmonger.yaml"
+      - "{{ heat_templates_basedir }}/environments/enable-internal-tls.yaml"
+      - "{{ templates_basedir }}/ceph-extra-config.yaml"
