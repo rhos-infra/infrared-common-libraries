@@ -1,0 +1,13 @@
+- name: Get overcloud entries
+  shell: |
+      source {{ freeipa_undercloud_rc }}
+      openstack stack output show overcloud HostsEntry -f value -c output_value
+  register: overcloud_entries
+
+- name: edit undercloud.conf
+  become: true
+  blockinfile:
+      path: /etc/hosts
+      backup: yes
+      marker: "# {mark} Overcloud Entries -->"
+      content: "{{ overcloud_entries.stdout }}"
