@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6d7eee69_ba75b236",
+        "filename": "roles/vbmc/tasks/iptables.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1006589
+      },
+      "writtenOn": "2018-01-03T15:14:00Z",
+      "side": 1,
+      "message": "If we are not using ansible_default_ipv4 fact from overcloud nodes anymore then why do we need the overcloud_deploy in that case? just add all the iptable rules when we setup vbmc.",
+      "range": {
+        "startLine": 59,
+        "startChar": 29,
+        "endLine": 59,
+        "endChar": 41
+      },
+      "revId": "882c5d52b3c28ce04db8d8a7ecc66a2db46c4faa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1a92c9_a7c1b990",
+        "filename": "roles/vbmc/tasks/main.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006589
+      },
+      "writtenOn": "2018-01-03T15:14:00Z",
+      "side": 1,
+      "message": "why do we need that?",
+      "range": {
+        "startLine": 3,
+        "startChar": 2,
+        "endLine": 3,
+        "endChar": 59
+      },
+      "revId": "882c5d52b3c28ce04db8d8a7ecc66a2db46c4faa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0c77f4dd_d7b06fc5",
+        "filename": "roles/vbmc/tasks/main.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006589
+      },
+      "writtenOn": "2018-01-03T15:14:00Z",
+      "side": 1,
+      "message": "Look like def is not needed. \nAlso I\u0027d suggest to keep overcloud_deploy default value \u003d to no. Just to not affect stable branch.",
+      "range": {
+        "startLine": 11,
+        "startChar": 65,
+        "endLine": 11,
+        "endChar": 70
+      },
+      "revId": "882c5d52b3c28ce04db8d8a7ecc66a2db46c4faa",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
