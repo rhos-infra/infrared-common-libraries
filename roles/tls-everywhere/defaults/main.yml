@@ -1,0 +1,22 @@
+---
+# Free IPA settings
+freeipa_node: "{{ groups['freeipa'][0] }}"
+freeipa_setup_script: https://raw.githubusercontent.com/openstack/tripleo-heat-templates/master/ci/scripts/freeipa_setup.sh
+freeipa_working_dir: /tmp
+freeipa_admin_password: 12345678
+freeipa_hosts_secret: redhat
+freeipa_directory_manager_password: redhat_01
+cloud_domain: redhat.local
+
+# Epel repo location
+epel_repo_url: http://ae.mirror.rasanegar.com/fedoraproject/pub/epel/7Server/x86_64/Packages/e/epel-release-7-11.noarch.rpm
+
+# Undercloud settings
+undercloud_rc: "~/stackrc"
+
+# Overcloud settings
+overcloud_deploy_script: "~/overcloud_deploy.sh"
+source_dir: "{{ (install|default({})).get('deployment', {}).get('files', 'virt') }}"
+templates_basedir: "{{ hostvars[groups['undercloud'][0]].ansible_user_dir }}/{{ source_dir | basename }}"
+heat_templates_basedir: "{{ (install|default({})).get('heat', {}).get('templates', {}).get('basedir', '/usr/share/openstack-tripleo-heat-templates') }}"
+ceph: "{{ ( True if (install.storage|default({})).backend|default('') == 'ceph' else False ) }}"
