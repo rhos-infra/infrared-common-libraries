@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "55e3e7ec_968cd287",
+        "filename": "roles/version-discovery/README.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006589
+      },
+      "writtenOn": "2018-01-09T08:58:38Z",
+      "side": 1,
+      "message": "Why do we need to set both undercloud and overcloud versions facts? Looks like they duplicate each other? Do we user overcloud_version somewhere?",
+      "range": {
+        "startLine": 6,
+        "startChar": 6,
+        "endLine": 6,
+        "endChar": 23
+      },
+      "revId": "9486ea263e08bd9c798a8148be1d4284c1ceded8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5cf967f8_68626ce8",
+        "filename": "roles/version-discovery/README.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006589
+      },
+      "writtenOn": "2018-01-09T08:58:38Z",
+      "side": 1,
+      "message": "I\u0027d suggest to give more information here.  What repos do we chaeck",
+      "range": {
+        "startLine": 10,
+        "startChar": 7,
+        "endLine": 10,
+        "endChar": 24
+      },
+      "revId": "9486ea263e08bd9c798a8148be1d4284c1ceded8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a190237_e982db6a",
+        "filename": "roles/version-discovery/tasks/repos.yml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006589
+      },
+      "writtenOn": "2018-01-09T08:58:38Z",
+      "side": 1,
+      "message": "Looks like this should be changed to 13",
+      "range": {
+        "startLine": 20,
+        "startChar": 6,
+        "endLine": 20,
+        "endChar": 14
+      },
+      "revId": "9486ea263e08bd9c798a8148be1d4284c1ceded8",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
