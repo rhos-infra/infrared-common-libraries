@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "641d9a4a_7b75bf35",
+        "filename": "roles/vbmc/tasks/main.yml",
+        "patchSetId": 8
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006589
+      },
+      "writtenOn": "2018-01-09T10:10:33Z",
+      "side": 1,
+      "message": "I\u0027d recommend to move that to the roles defaults: vbmc/defaults/main.yml instead of having it here.",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 28
+      },
+      "revId": "92ad9727cf9119f6f39cab8ea14338481d1ae11b",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
