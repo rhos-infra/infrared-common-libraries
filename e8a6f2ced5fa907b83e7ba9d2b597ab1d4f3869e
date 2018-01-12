@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "ff728618_6fa5ced6",
+        "filename": "roles/tls-everywhere/defaults/main.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1010429
+      },
+      "writtenOn": "2018-01-12T10:32:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9b8f3497_a2a438e1",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 4
+      },
+      "revId": "e8a6f2ced5fa907b83e7ba9d2b597ab1d4f3869e",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f51b0140_ba927186",
         "filename": "roles/tls-everywhere/tasks/prepare_overcloud.yml",
         "patchSetId": 4
@@ -36,6 +60,30 @@
       "writtenOn": "2018-01-12T09:23:57Z",
       "side": 1,
       "message": "I believe this file can be missing or in other location. I\u0027d suggest to have a validation stage and check that we have everything we need to proceed with setup. And fail with friendly message when something is missing.",
+      "range": {
+        "startLine": 20,
+        "startChar": 40,
+        "endLine": 20,
+        "endChar": 72
+      },
+      "revId": "e8a6f2ced5fa907b83e7ba9d2b597ab1d4f3869e",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4bf116b3_4d3f57c5",
+        "filename": "roles/tls-everywhere/tasks/prepare_overcloud.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1010429
+      },
+      "writtenOn": "2018-01-12T10:32:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f51b0140_ba927186",
       "range": {
         "startLine": 20,
         "startChar": 40,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "e36be89f_c4514e6d",
+        "filename": "roles/tls-everywhere/tasks/prepare_undercloud.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1010429
+      },
+      "writtenOn": "2018-01-12T10:32:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "32388873_09de59d0",
+      "range": {
+        "startLine": 6,
+        "startChar": 47,
+        "endLine": 6,
+        "endChar": 51
+      },
+      "revId": "e8a6f2ced5fa907b83e7ba9d2b597ab1d4f3869e",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1f2fa5d1_6b6b12ae",
         "filename": "roles/tls-everywhere/tasks/prepare_undercloud.yml",
         "patchSetId": 4
@@ -82,6 +154,30 @@
       "writtenOn": "2018-01-12T09:23:57Z",
       "side": 1,
       "message": "same as above",
+      "range": {
+        "startLine": 31,
+        "startChar": 69,
+        "endLine": 31,
+        "endChar": 73
+      },
+      "revId": "e8a6f2ced5fa907b83e7ba9d2b597ab1d4f3869e",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6f8e498d_678fc64c",
+        "filename": "roles/tls-everywhere/tasks/prepare_undercloud.yml",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1010429
+      },
+      "writtenOn": "2018-01-12T10:32:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1f2fa5d1_6b6b12ae",
       "range": {
         "startLine": 31,
         "startChar": 69,
@@ -117,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "50d6099e_f221ac03",
+        "filename": "roles/tls-everywhere/templates/ceph-extra-config.yaml.j2",
+        "patchSetId": 4
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1010429
+      },
+      "writtenOn": "2018-01-12T10:32:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d2fc0b1b_b8ad2507",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 1,
+        "endChar": 19
+      },
+      "revId": "e8a6f2ced5fa907b83e7ba9d2b597ab1d4f3869e",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "07bbadf1_a411b873",
         "filename": "roles/tls-everywhere/templates/cloud-names.yaml.j2",
         "patchSetId": 4
@@ -128,6 +248,30 @@
       "writtenOn": "2018-01-12T09:23:57Z",
       "side": 1,
       "message": "nit: use 4 spaces as indent",
+      "range": {
+        "startLine": 2,
+        "startChar": 0,
+        "endLine": 2,
+        "endChar": 2
+      },
+      "revId": "e8a6f2ced5fa907b83e7ba9d2b597ab1d4f3869e",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "47ba3c62_9726d972",
+        "filename": "roles/tls-everywhere/templates/cloud-names.yaml.j2",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1010429
+      },
+      "writtenOn": "2018-01-12T10:32:21Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "07bbadf1_a411b873",
       "range": {
         "startLine": 2,
         "startChar": 0,
