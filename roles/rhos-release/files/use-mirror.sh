@@ -28,6 +28,7 @@ sed -r -i "s/ayanami.*\.redhat.com/${mirror}\/ayanami/" *.repo
 sed -i "s/pulp.*\.redhat\.com/${mirror}\/pulp/" *.repo
 sed -i "s|cdn\.stage\.redhat\.com|${mirror}/cdn-stage|" *.repo
 sed -i "s|https\?://copr-be\.cloud\.fedoraproject\.org|http://${mirror}/copr-be|" *.repo
+sed -i "s|https\?://download.fedoraproject.org|http://${mirror}/fedora-cache|" *.repo
 
 # patch hosts to enforce communication only with mirror
 
