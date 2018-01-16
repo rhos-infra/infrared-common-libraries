@@ -2,7 +2,7 @@
 set -ex
 
 mirror="$1"
-if [[ "$mirror" =~ ^(brq|qeos|tlv)$ ]]; then
+if [[ "$mirror" =~ ^(brq|rdu2|qeos|tlv)$ ]]; then
     mirror="rhos-qe-mirror-${mirror}.usersys.redhat.com"
 fi
 
