@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "17bcb00d_a4951f39",
+        "filename": "roles/tls-everywhere/README.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1006589
+      },
+      "writtenOn": "2018-01-19T11:54:31Z",
+      "side": 1,
+      "message": "need to update variable names",
+      "range": {
+        "startLine": 59,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 25
+      },
+      "revId": "9d39a6cfab049b3984eb5bb85ecd56a9d03a9a2d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "78460fb0_72577e04",
+        "filename": "roles/tls-everywhere/tasks/main.yml",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1006589
+      },
+      "writtenOn": "2018-01-19T11:54:31Z",
+      "side": 1,
+      "message": "lets move that to the default. Looks like in future we can have more that one undercloud. So let user to decide what undercloud to user. By default, this var should be \u003d  groups[\u0027undercloud\u0027][0]",
+      "range": {
+        "startLine": 9,
+        "startChar": 15,
+        "endLine": 9,
+        "endChar": 46
+      },
+      "revId": "9d39a6cfab049b3984eb5bb85ecd56a9d03a9a2d",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
