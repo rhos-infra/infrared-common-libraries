@@ -34,12 +34,14 @@
       name: "{{ item }}"
       virtualenv: "{{ shade_path_venv }}"
   with_items:
-    - setuptools==17.0
-    - pip==9.0.1
+    - setuptools>=17.0
+    - pip>=9.0.1
 
 - name: shade virtualenv deps
   pip:
       name:
-        - pytz==2016.4
-        - shade==1.25.0
+        - pytz>=2016.4
+        - shade>=1.26.0
+        - keystoneauth1>=3.3.0
+      # use ranges, if needed, but always mention bug when you do
       virtualenv: "{{ shade_path_venv }}"
