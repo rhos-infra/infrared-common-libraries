@@ -42,4 +42,7 @@
       name:
         - pytz==2016.4
         - shade==1.25.0
+        - keystoneauth1<3.2.0
+      # see https://projects.engineering.redhat.com/browse/RHOSINFRA-1562
+      # TODO: unpin shade to avoid other conflicts
       virtualenv: "{{ shade_path_venv }}"
