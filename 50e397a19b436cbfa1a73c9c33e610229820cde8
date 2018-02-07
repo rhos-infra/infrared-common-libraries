@@ -1,0 +1,8 @@
+Verified+1: rhosqeauto <obaranov+rhosqeauto@redhat.com>
+Code-Review+1: Oleksandr Vorobiov <ovorobio@redhat.com>
+Code-Review+2: Avi Talmor <atalmor@redhat.com>
+Submitted-by: Sorin Sbarnea <ssbarnea@redhat.com>
+Submitted-at: Wed, 07 Feb 2018 10:53:54 -0500
+Reviewed-on: https://review.gerrithub.io/398388
+Project: rhos-infra/infrared-common-libraries
+Branch: refs/heads/master
