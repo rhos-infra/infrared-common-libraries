@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "730628e1_9229543a",
+        "filename": "roles/rdo-release/defaults/main.yml",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1012293
+      },
+      "writtenOn": "2018-02-12T20:48:09Z",
+      "side": 1,
+      "message": "Just a nit - do you think it\u0027s better to rename the param as rr_release_name_discovered_UC/ceph, just to reference undercloud or ceph. I thought it might be helpful while debugging, in cases, where UC is using an outdated/wrong image.",
+      "revId": "efe26d19e3f8e0a8e2337ac04c7c6c0ed2e7d5a2",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
