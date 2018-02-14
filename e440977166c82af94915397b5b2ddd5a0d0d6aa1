@@ -1,0 +1,10 @@
+Verified+1: rhosqeauto <obaranov+rhosqeauto@redhat.com>
+Code-Review+1: Oleksii Baranov <obaranov@redhat.com>
+Code-Review+1: Queria Sa-Tas <psedlak@redhat.com>
+Code-Review+1: Arie Bregman <abregman@redhat.com>
+Code-Review+2: Oleksandr Vorobiov <ovorobio@redhat.com>
+Submitted-by: Oleksandr Vorobiov <ovorobio@redhat.com>
+Submitted-at: Wed, 14 Feb 2018 10:15:23 -0500
+Reviewed-on: https://review.gerrithub.io/399474
+Project: rhos-infra/infrared-common-libraries
+Branch: refs/heads/master
